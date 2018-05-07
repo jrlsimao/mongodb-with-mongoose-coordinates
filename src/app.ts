@@ -67,7 +67,7 @@ async function executaSearch():Promise<boolean>{
     {type:"Point", coordinates:[5,5]}
   }}}).limit(1).exec((err, result)=>{
     if(result){
-      //Tem de aparecer Helder
+      //We expect Helder to appear
       console.log('Closest to %s is %s', [5,5], result);
     }
     else{
@@ -76,7 +76,7 @@ async function executaSearch():Promise<boolean>{
   });
   return true;
 }
-//Pode ser necessario executar 2 vezes
+//Run twice sometimes
 async function main(resultado:any){
   try{
     console.log(resultado.length);
